@@ -51,8 +51,36 @@
             </select>
         </div> -->
         <!-- height -->
+        <div class="form-group">
+            <label for="height">height</label>
+            <select name="height_feet" id="height_feet">
+              <option value="3">3 ft</option>
+              <option value="4">4 ft</option>
+              <option value="5">5 ft</option>
+              <option value="6">6 ft</option>
+              <option value="7">7 ft</option>
+            </select>
+            <select name="height_inches" id="height_inches">
+              <option value="0">0 inches </option>
+              <option value="1">1 inch </option>
+              <option value="2">2 inches </option>
+              <option value="3">3 inches </option>
+              <option value="4">4 inches </option>
+              <option value="5">5 inches </option>
+              <option value="6">6 inches </option>
+              <option value="7">7 inches </option>
+              <option value="8">8 inches </option>
+              <option value="9">9 inches </option>
+              <option value="10">10 inches </option>
+              <option value="11">11 inches </option>
+            </select>
+        </div>
 
         <!-- weight -->
+        <div class="form-group">
+            <label for="weight">weight (lbs)</label>
+            <input type="text" class="form-control" id="weight" placeholder="weight">
+        </div>
 
         <!-- Age -->
         <div class="form-group">
@@ -73,6 +101,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
 <script src="assets/javascript/firebase.js"></script>
+<script src="assets/javascript/helper.js"></script>
 <script src="assets/javascript/main.js"></script>
 </body>
 </html>

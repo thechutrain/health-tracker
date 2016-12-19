@@ -8,6 +8,18 @@ function processForm(event){
   let lastName = $("#lastName").val().trim();
   let gender = $("input[name=gender]:checked").val();
   let age = $("#age").val().trim();
+  let weight = $("#weight").val().trim();
+  // console.log(weight);
+  // calculate the height in inches
+  let height_feet = $("#height_feet :selected").val();
+  let height_inches = $("#height_inches :selected").val();
+  let total_height = Number(height_feet) * 12 + Number(height_inches);
+  // calculate BMI
+  let bmi = calcBMI(total_height, weight);
+
+
+  // console.log(total_height);
+  // console.log(typeof feet);
 
   // 2) validate data
   // TO DO!!
@@ -19,6 +31,9 @@ function processForm(event){
     lastName: lastName,
     gender: gender,
     age: age,
+    weight: weight,
+    height: total_height,
+    bmi: bmi,
     timeStamp: moment().unix(), // save the time as a unix number
   });
 
@@ -26,7 +41,10 @@ function processForm(event){
   $("#firstName").val("");
   $("#lastName").val("");
   $("input[name=gender]:checked").prop('checked', false);
+  // $("select[name=height_feet]:selected").prop("selectedIndex", 0);
+  $("#weight").val("");
   $("#age").val("");
+
 
 }; // closes the processForm function
 
